@@ -1,0 +1,117 @@
+Usando o Git: Comando básicos de utilização
+1. Entrar na pasta
+
+No git bash, certifique-se de estar na pasta que foi definida como seu repositório local. Caso não esteja, entre:
+
+Clique no logo do Git Bash
+Entre com o caminho da pasta onde irá trabalhar: cd C:/caminho/caminho/nomepasta/
+
+--Carga (Objetos Oracle)
+Diretorio
+cd C:/Users/ram0622/Documents/03.SulAmerica/Projetos/ms-rentabilidade-tools
+
+Clone
+git clone https://bitbucket.sulamerica.com.br/scm/pos/ms-rentabilidade-tools.git
+
+Acessando diretorio ms-rentabilidade-tools
+cd ms-rentabilidade-tools
+
+Acessando branch contendo os objetos do banco
+git checkout feature/ddl-pos-vendas
+
+Baixa as alterações mais recentes
+git pull origin
+
+Avalia a situação da modificação 
+git status
+
+Adiciona uma alteração no diretório ativo
+git add .
+
+Commit da alteração 
+git commit -m "CRP-55659"
+
+Comando para subir a alteração ao Git
+git push origin feature/ddl-pos-vendas
+
+
+ 
+--Emendas
+Clone
+git clone https://bitbucket.sulamerica.com.br/scm/pos/emendas.git	
+
+
+Acessando branch contendo os objetos do banco
+git checkout develop
+
+--Contas Médicas Pagas
+Clone
+git clone https://bitbucket.sulamerica.com.br/scm/pos/fis-contas-medicas-pagas.git
+
+Acessando branch contendo os objetos do banco
+git checkout develop
+
+
+--Rel Itens Pagos
+Clone
+git clone https://bitbucket.sulamerica.com.br/scm/pos/fis-rel-itens-pagos.git
+
+--Rel Itens Pagos
+Clone
+git clone https://bitbucket.sulamerica.com.br/scm/pos/relatorios-gerenciais.git
+
+--EmendasBatch
+Clone
+git clone https://bitbucket.sulamerica.com.br/scm/pos/emendasbatch.git
+
+Acessando branch contendo os
+git checkout prdbatch
+
+
+--Configurando sua identificação no Git
+git config --global user.name "Reinaldo Yungh"
+git config --global user.email "reinaldoyungh.gft@sulamerica.com.br"
+git config --list
+
+
+--Remover arquivos na area de stage (apos o comando "git add .")
+git reset 
+
+--Desfazer modificações não salvas
+git reset 
+git clean -df
+git checkout -- .
+
+--Desfazer commit, não perdendo as modificações e retornando para o ultimo head
+git reset --soft HEAD~1
+
+
+--Desfazer commit e eliminiar a modificação 
+git log 
+git reset --hard <codigo do commit>
+
+--Diferença para arquivos diferentes: realizando o merge pelo VIM
+ESC (teclar ESC)
+:wq
+git log --oneline (avaliar a ordem dos commits)
+git push
+
+--Diferença para o mesmo arquivo: O novo arquivo constará os conflitos com comentários >>>>>>  <<<<<<
+git pull origin <branch> (baixa as atualizações e será mencionado MERGING)
+git add . (Após correção)
+git commit -m ""
+git log --oneline
+git push
+
+--Ignorar as modificações que estão no GIT e subscrever com as suas local ***ATENÇÂO***
+git push -f 
+
+--Fazer uma copia do seu repositorio para outro 
+gerar um novo repositorio no git 
+git remote set-url origin git@github.com:seuusuario/seurepositorio.git
+
+
+
+
+
+
