@@ -70,7 +70,7 @@ git checkout prdbatch
 
 --Configurando sua identificação no Git
 git config --global user.name "Reinaldo Yungh"
-git config --global user.email "reinaldoyungh.gft@sulamerica.com.br"
+git config --global user.email "reinaldo.yungh@gmail.com"
 git config --list
 
 
